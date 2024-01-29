@@ -5,6 +5,7 @@ import WalletIcon from '../assets/images/tab/wallet.svg';
 import QrIcon from '../assets/images/tab/qr.svg';
 import BalanceIcon from '../assets/images/tab/balance.svg';
 import ProfileIcon from '../assets/images/tab/profile.svg';
+import {colors} from '../utils/constants/colors';
 
 type Props = {
   route: string;
@@ -21,7 +22,7 @@ export const BottomTab = ({route, isfocused}: Props) => {
           <HomeIcon
             width={width}
             height={height}
-            stroke={isfocused ? '#FFFFFF' : '#5A5A5A'}
+            stroke={isfocused ? colors.white : colors.grey}
           />
         );
 
@@ -30,7 +31,7 @@ export const BottomTab = ({route, isfocused}: Props) => {
           <WalletIcon
             width={width}
             height={height}
-            stroke={isfocused ? '#FFFFFF' : '#5A5A5A'}
+            stroke={isfocused ? colors.white : colors.grey}
           />
         );
 
@@ -39,7 +40,7 @@ export const BottomTab = ({route, isfocused}: Props) => {
           <QrIcon
             width={width}
             height={height}
-            stroke={isfocused ? '#FFFFFF' : '#5A5A5A'}
+            stroke={isfocused ? colors.white : colors.grey}
           />
         );
 
@@ -48,7 +49,7 @@ export const BottomTab = ({route, isfocused}: Props) => {
           <BalanceIcon
             width={width}
             height={height}
-            stroke={isfocused ? '#FFFFFF' : '#5A5A5A'}
+            stroke={isfocused ? colors.white : colors.grey}
           />
         );
 
@@ -57,7 +58,7 @@ export const BottomTab = ({route, isfocused}: Props) => {
           <ProfileIcon
             width={width}
             height={height}
-            stroke={isfocused ? '#FFFFFF' : '#5A5A5A'}
+            stroke={isfocused ? colors.white : colors.grey}
           />
         );
 

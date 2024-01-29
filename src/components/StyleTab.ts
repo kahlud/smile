@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../utils/constants/colors';
 
 export default StyleSheet.create({
   tabBarContainer: {
@@ -7,7 +8,7 @@ export default StyleSheet.create({
     height: 70,
     position: 'absolute',
     alignSelf: 'center',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: colors.white,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 4,
     borderBottomLeftRadius: 4,
@@ -35,7 +36,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   tabPink: {
-    shadowColor: '#c58bf2',
+    shadowColor: colors.primaryPink,
     shadowOffset: {
       width: 0,
       height: 0,
@@ -45,7 +46,7 @@ export default StyleSheet.create({
     elevation: 8,
   },
   tabBlue: {
-    shadowColor: '#929EFD',
+    shadowColor: colors.primaryBlue,
     shadowOffset: {
       width: 0,
       height: 0,
@@ -55,7 +56,7 @@ export default StyleSheet.create({
     elevation: 8,
   },
   textButton: {
-    color: '#FFFFFF',
+    color: colors.white,
   },
   pressTab: {
     flex: 1,

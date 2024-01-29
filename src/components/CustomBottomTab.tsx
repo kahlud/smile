@@ -5,6 +5,7 @@ import StyleCustomBottom from './StyleTab';
 import {BottomTab} from './BottomTab';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 import LinearGradient from 'react-native-linear-gradient';
+import {colors} from '../utils/constants/colors';
 
 export const CustomBottomTab = ({state, navigation}: BottomTabBarProps) => {
   const nameRoute = state.index;
@@ -30,7 +31,9 @@ export const CustomBottomTab = ({state, navigation}: BottomTabBarProps) => {
         ]}>
         <LinearGradient
           colors={
-            nameRoute === 2 ? ['#929EFD', '#ABD5FF'] : ['#C58BF2', '#EEA4CE']
+            nameRoute === 2
+              ? [colors.primaryBlue, colors.secondaryBlue]
+              : [colors.primaryPink, colors.secondaryPink]
           }
           style={StyleCustomBottom.selectIcon}
           start={{x: 0.0, y: 0.2}}
