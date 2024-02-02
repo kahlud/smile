@@ -7,10 +7,10 @@ import BalanceIcon from '../assets/images/tab/balance.svg';
 import ProfileIcon from '../assets/images/tab/profile.svg';
 import {colors} from '../utils/constants/colors';
 
-type Props = {
+interface Props {
   route: string;
   isfocused: boolean;
-};
+}
 
 export const BottomTab = ({route, isfocused}: Props) => {
   const renderIcon = (route: string, isfocused: boolean) => {

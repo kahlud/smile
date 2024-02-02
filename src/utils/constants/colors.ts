@@ -5,4 +5,5 @@ export const colors = {
   secondaryPink: '#EEA4CE',
   white: '#FFFFFF',
   grey: '#5A5A5A',
+  text: '#1E1E1E',
 };

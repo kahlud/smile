@@ -3,10 +3,10 @@ import React from 'react';
 import {SvgProps} from 'react-native-svg';
 import StyleComponentsHeader from './StyleComponentsHeader';
 
-type Props = {
+interface Props {
   imageBotton: React.FC<SvgProps>;
   onPressBotton: (event: GestureResponderEvent) => void;
-};
+}
 
 export const BotomHeader = ({imageBotton, onPressBotton}: Props) => {
   const ImageBotton = imageBotton;

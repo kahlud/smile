@@ -11,11 +11,11 @@ export default StyleSheet.create({
     backgroundColor: colors.white,
     shadowColor: '#000000',
     shadowOffset: {
-      width: 1,
-      height: 1,
+      width: 0,
+      height: 0,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 5.62,
-    elevation: 6,
+    shadowOpacity: 0.24,
+    shadowRadius: 3.6,
+    elevation: 2,
   },
 });

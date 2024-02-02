@@ -11,6 +11,8 @@ export default StyleSheet.create({
   },
   textHeader: {fontWeight: '600', fontSize: 16},
   flatListCards: {paddingStart: 20},
-  flatListCardsContainer: {paddingRight: 40},
+  flatListCardsContainer: {
+    paddingRight: 40,
+  },
   itemSeparatorCards: {width: 20},
 });
