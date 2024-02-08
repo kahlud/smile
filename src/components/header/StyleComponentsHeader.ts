@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../utils/constants/colors';
+import {colors} from '../../utils/constants/colors';
 
 export default StyleSheet.create({
   pressableBottonHeader: {

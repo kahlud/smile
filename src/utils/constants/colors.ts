@@ -6,4 +6,9 @@ export const colors = {
   white: '#FFFFFF',
   grey: '#5A5A5A',
   text: '#1E1E1E',
+  activityRelaxed: '#F6EAFA',
+  activityHappy: '#ECF3FF',
+  divider: '#E4E4E4',
+  green: '#189324',
+  red: '#C6494D',
 };

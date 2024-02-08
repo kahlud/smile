@@ -8,9 +8,9 @@ import {WalletScreen} from '../screens/walletScreen';
 import {QrScreen} from '../screens/qrScreen/intex';
 import {ProfileScreen} from '../screens/profileScreen';
 import {BalanceScreen} from '../screens/balanceScreen/index copy';
-import {CustomBottomTab} from '../components/CustomBottomTab';
+import {CustomBottomTab} from '../components/tab/CustomBottomTab';
 import {View} from 'react-native';
-import StyleTab from '../components/StyleTab';
+import StyleTab from '../components/tab/StyleTab';
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 export type BottomTabParamList = {

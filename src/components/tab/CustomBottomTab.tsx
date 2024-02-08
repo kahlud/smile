@@ -5,7 +5,7 @@ import StyleCustomBottom from './StyleTab';
 import {BottomTab} from './BottomTab';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 import LinearGradient from 'react-native-linear-gradient';
-import {colors} from '../utils/constants/colors';
+import {colors} from '../../utils/constants/colors';
 
 export const CustomBottomTab = ({state, navigation}: BottomTabBarProps) => {
   const nameRoute = state.index;

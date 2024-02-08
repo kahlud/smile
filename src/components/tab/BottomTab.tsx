@@ -1,11 +1,11 @@
 import {View} from 'react-native';
 import React from 'react';
-import HomeIcon from '../assets/images/tab/home.svg';
-import WalletIcon from '../assets/images/tab/wallet.svg';
-import QrIcon from '../assets/images/tab/qr.svg';
-import BalanceIcon from '../assets/images/tab/balance.svg';
-import ProfileIcon from '../assets/images/tab/profile.svg';
-import {colors} from '../utils/constants/colors';
+import HomeIcon from '../../assets/images/tab/home.svg';
+import WalletIcon from '../../assets/images/tab/wallet.svg';
+import QrIcon from '../../assets/images/tab/qr.svg';
+import BalanceIcon from '../../assets/images/tab/balance.svg';
+import ProfileIcon from '../../assets/images/tab/profile.svg';
+import {colors} from '../../utils/constants/colors';
 
 interface Props {
   route: string;
