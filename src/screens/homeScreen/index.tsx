@@ -9,6 +9,7 @@ import {activityHome} from '../../utils/activityHome';
 import {HomeActivityButton} from '../../components/bottomActivity/HomeActivityButton';
 import {activityInformation} from '../../mock/activityInformation';
 import {ActivityInformation} from '../../components/activityInformation/ActivityInformation';
+import {PrimaryBotton} from '../../components/PrimaryBotton';
 
 export const HomeScreen = () => {
   return (
@@ -66,6 +67,14 @@ export const HomeScreen = () => {
               />
             );
           })}
+        </View>
+        <View style={{marginRight: 20, marginTop: 12}}>
+          <PrimaryBotton
+            nameButton="Ver màs"
+            width={140}
+            direction="END"
+            color="PINK"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

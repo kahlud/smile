@@ -4,11 +4,12 @@ import {colors} from '../../utils/constants/colors';
 export default StyleSheet.create({
   continer: {
     paddingHorizontal: 18,
-    paddingVertical: 8,
+    alignItems: 'center',
   },
   containerTransaction: {
     flexDirection: 'row',
     alignItems: 'center',
+    paddingVertical: 12,
   },
   containerImage: {
     margin: 2,
@@ -28,9 +29,8 @@ export default StyleSheet.create({
     fontWeight: '400',
   },
   divider: {
-    width: 370,
+    width: 350,
     height: 1,
     backgroundColor: colors.divider,
-    marginTop: 10,
   },
 });
