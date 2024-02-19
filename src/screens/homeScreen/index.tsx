@@ -10,8 +10,10 @@ import {HomeActivityButton} from '../../components/bottomActivity/HomeActivityBu
 import {activityInformation} from '../../mock/activityInformation';
 import {ActivityInformation} from '../../components/activityInformation/ActivityInformation';
 import {PrimaryBotton} from '../../components/PrimaryBotton';
+import {useNavigation} from '@react-navigation/native';
 
 export const HomeScreen = () => {
+  const navigtion = useNavigation();
   return (
     <SafeAreaView style={StyleHome.safeAreaHome}>
       <ScrollView style={StyleHome.scrollView}>
@@ -48,7 +50,7 @@ export const HomeScreen = () => {
           {activityHome.map(item => {
             return (
               <HomeActivityButton
-                onPressBotton={() => {}}
+                onPressBotton={() => navigtion.navigate(item.onPress)}
                 text={item.text}
                 image={item.image}
               />
@@ -68,7 +70,7 @@ export const HomeScreen = () => {
             );
           })}
         </View>
-        <View style={{marginRight: 20, marginTop: 12}}>
+        <View style={StyleHome.containerBotton}>
           <PrimaryBotton
             nameButton="Ver màs"
             width={140}

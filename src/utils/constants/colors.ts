@@ -11,4 +11,6 @@ export const colors = {
   divider: '#E4E4E4',
   green: '#189324',
   red: '#C6494D',
+  blueLigth: '#DEE5FF',
+  greyLigth: '#F4F4F4',
 };

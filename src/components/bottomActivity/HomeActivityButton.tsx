@@ -1,7 +1,6 @@
 import {Text, GestureResponderEvent, Pressable} from 'react-native';
 import React from 'react';
 import {SvgProps} from 'react-native-svg';
-import {colors} from '../../utils/constants/colors';
 import StyleHomeActivityButton from './StyleHomeActivityButton';
 
 interface Props {

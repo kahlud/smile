@@ -18,4 +18,11 @@ export default StyleSheet.create({
     shadowRadius: 3.6,
     elevation: 2,
   },
+  containerHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    alignItems: 'center',
+  },
+  titleHeader: {textAlign: 'center', fontSize: 20, fontWeight: '600'},
 });

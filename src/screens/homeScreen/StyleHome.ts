@@ -1,7 +1,8 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../utils/constants/colors';
 
 export default StyleSheet.create({
-  safeAreaHome: {flex: 1, backgroundColor: 'white'},
+  safeAreaHome: {flex: 1, backgroundColor: colors.white},
   headerContainer: {
     paddingHorizontal: 14,
     flexDirection: 'row',
@@ -40,4 +41,5 @@ export default StyleSheet.create({
     marginLeft: 18,
     marginBottom: 8,
   },
+  containerBotton: {marginRight: 20, marginTop: 12},
 });

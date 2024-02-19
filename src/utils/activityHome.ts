@@ -6,10 +6,10 @@ import Promotions from '../assets/images/icons/promotions.svg';
 import Qr from '../assets/images/icons/scanQr.svg';
 
 export const activityHome = [
-  {image: SendMoney, text: 'Transferir pesos'},
-  {image: AskForMoney, text: 'Pedir pesos'},
-  {image: PayService, text: 'Pagar servicio'},
-  {image: Recharge, text: 'Realizar recarga'},
-  {image: Promotions, text: 'Promos disponibles'},
-  {image: Qr, text: 'Qr personal'},
+  {image: SendMoney, text: 'Transferir pesos', onPress: 'MoneyTransfer'},
+  {image: AskForMoney, text: 'Pedir pesos', onPress: 'AskForMoney'},
+  {image: PayService, text: 'Pagar servicio', onPress: 'PayService'},
+  {image: Recharge, text: 'Realizar recarga', onPress: 'Recharge'},
+  {image: Promotions, text: 'Promos disponibles', onpress: 'Promotions'},
+  {image: Qr, text: 'Qr personal', onPress: 'QR'},
 ];
