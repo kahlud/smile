@@ -3,25 +3,27 @@ import React from 'react';
 import {SvgProps} from 'react-native-svg';
 import Arrow from '../../assets/images/icons/arrow-right.svg';
 import styleSelectionOptions from './styleSelectionOptions';
+import {useNavigation} from '@react-navigation/native';
 
 interface Props {
   image: React.FC<SvgProps>;
   text: string;
-  onPress: (event: GestureResponderEvent) => void;
+  navigationScreen: string;
 }
 
-export const SelectionOptions = ({image, text, onPress}: Props) => {
+export const SelectionOptions = ({image, text, navigationScreen}: Props) => {
   const ImageOption = image;
+  const navigation = useNavigation();
   return (
     <View style={styleSelectionOptions.containerSerlection}>
       <View style={styleSelectionOptions.containerItems}>
         <View style={styleSelectionOptions.containerImage}>
-          <ImageOption width={36} />
+          <ImageOption width={36} height={36} />
         </View>
         <Text style={styleSelectionOptions.text}>{text}</Text>
         <Pressable
           style={styleSelectionOptions.buttonPressable}
-          onPress={() => onPress}>
+          onPress={() => navigation.navigate(navigationScreen)}>
           <Arrow style={styleSelectionOptions.arrow} />
         </Pressable>
       </View>

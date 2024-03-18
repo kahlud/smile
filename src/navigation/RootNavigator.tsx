@@ -1,11 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {BottomTabNavigator} from './BottomTabNavigator';
-import {MoneyTransfer} from '../screens/homeScreen/moneyTransfer';
+import {TransferRootNavigation} from './TransferNavigationStack';
 
 export type RootStackParamList = {
   HomeTab: undefined;
-  MoneyTransfer: undefined;
+  TransferNavigation: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -19,8 +19,8 @@ export const RootNavigator = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="MoneyTransfer"
-        component={MoneyTransfer}
+        name="TransferNavigation"
+        component={TransferRootNavigation}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

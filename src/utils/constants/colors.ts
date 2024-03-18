@@ -13,4 +13,5 @@ export const colors = {
   red: '#C6494D',
   blueLigth: '#DEE5FF',
   greyLigth: '#F4F4F4',
+  greySecondary: '#999999',
 };

@@ -24,5 +24,5 @@ export default StyleSheet.create({
     paddingHorizontal: 12,
     alignItems: 'center',
   },
-  titleHeader: {textAlign: 'center', fontSize: 20, fontWeight: '600'},
+  titleHeader: {textAlign: 'center', fontSize: 20, fontWeight: '400'},
 });

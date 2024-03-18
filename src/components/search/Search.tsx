@@ -1,15 +1,21 @@
-import {View, Text, TextInput} from 'react-native';
+import {View, TextInput} from 'react-native';
 import React from 'react';
-import {colors} from '../../utils/constants/colors';
 import SearchImage from '../../assets/images/icons/search.svg';
+import styleSearch from './styleSearch';
+import {colors} from '../../utils/constants/colors';
 
 interface Props {}
 
 export const Search = ({}: Props) => {
   return (
-    <View style={{backgroundColor: colors.greyLigth, flexDirection: 'row'}}>
+    <View style={styleSearch.container}>
       <SearchImage />
-      <TextInput></TextInput>
+      <TextInput
+        placeholder="Buscar una cuenta"
+        placeholderTextColor={colors.grey}
+        keyboardType="default"
+        style={styleSearch.textInput}
+      />
     </View>
   );
 };

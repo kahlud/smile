@@ -1,4 +1,4 @@
-import {Text, Pressable} from 'react-native';
+import {Text, Pressable, GestureResponderEvent} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../utils/constants/colors';
@@ -19,19 +19,26 @@ interface Props {
   width: number;
   direction: keyof typeof Direction;
   color: keyof typeof Colors;
+  OnPress: (event: GestureResponderEvent) => void;
 }
 
-export const PrimaryBotton = ({nameButton, width, direction, color}: Props) => {
+export const PrimaryBotton = ({
+  nameButton,
+  width,
+  direction,
+  color,
+  OnPress,
+}: Props) => {
   return (
-    <Pressable>
+    <Pressable onPress={OnPress}>
       <LinearGradient
         colors={
-          color
-            ? [colors.primaryPink, colors.secondaryPink]
-            : [colors.primaryBlue, colors.secondaryBlue]
+          color === 'BLUE'
+            ? [colors.primaryBlue, colors.secondaryBlue]
+            : [colors.primaryPink, colors.secondaryPink]
         }
-        start={{x: 0.33, y: 0.1}}
-        end={{x: 0.4, y: 0.9}}
+        start={{x: 0.59, y: 0.2}}
+        end={{x: 0.6, y: 0.9}}
         style={[
           stylePrimaryBotton.button,
           {width: width, alignSelf: Direction[direction]},

@@ -4,7 +4,7 @@ import {Card} from '../../components/card/Card';
 import {cardsDetails} from '../../mock/card';
 import Notifications from '../../assets/images/icons/notification.svg';
 import {BotomHeader} from '../../components/header/BotomHeader';
-import StyleHome from './StyleHome';
+import StyleHome from './styleHome';
 import {activityHome} from '../../utils/activityHome';
 import {HomeActivityButton} from '../../components/bottomActivity/HomeActivityButton';
 import {activityInformation} from '../../mock/activityInformation';

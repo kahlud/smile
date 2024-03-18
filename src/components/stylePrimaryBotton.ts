@@ -3,7 +3,7 @@ import {colors} from '../utils/constants/colors';
 
 export default StyleSheet.create({
   button: {
-    height: 40,
+    height: 46,
     borderTopLeftRadius: 4,
     borderTopEndRadius: 15,
     borderBottomEndRadius: 4,
