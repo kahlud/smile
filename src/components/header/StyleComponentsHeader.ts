@@ -24,5 +24,7 @@ export default StyleSheet.create({
     paddingHorizontal: 12,
     alignItems: 'center',
   },
+  containerTitle: {flexDirection: 'row'},
+  imageTitle: {marginRight: 10},
   titleHeader: {textAlign: 'center', fontSize: 20, fontWeight: '400'},
 });
