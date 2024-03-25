@@ -16,7 +16,7 @@ enum Direction {
 }
 interface Props {
   nameButton: string;
-  width: number;
+  width: string;
   direction: keyof typeof Direction;
   color: keyof typeof Colors;
   OnPress: (event: GestureResponderEvent) => void;

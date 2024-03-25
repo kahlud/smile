@@ -25,7 +25,6 @@ export default StyleSheet.create({
     marginTop: 4,
   },
   pressableReason: {
-    flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: colors.greyLigth,
     width: '60%',
@@ -37,6 +36,4 @@ export default StyleSheet.create({
     paddingVertical: 4,
     marginTop: 90,
   },
-  textReason: {fontSize: 20, marginRight: 14},
-  arrow: {transform: [{rotate: '270deg'}], marginTop: 2},
 });

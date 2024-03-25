@@ -14,4 +14,5 @@ export const colors = {
   blueLigth: '#DEE5FF',
   greyLigth: '#F4F4F4',
   greySecondary: '#999999',
+  modal: '#00000029',
 };

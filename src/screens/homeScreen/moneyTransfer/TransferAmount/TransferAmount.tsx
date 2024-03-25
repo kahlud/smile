@@ -1,13 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
 import {colors} from '../../../../utils/constants/colors';
 import {Header} from '../../../../components/header/Header';
 import BBVALogo from '../../../../assets/images/icons/tarjetas/BBVALogo.svg';
-import Arrow from '../../../../assets/images/icons/arrow-left.svg';
 import {PrimaryBotton} from '../../../../components/PrimaryBotton';
 import styleTransferAmount from './styleTransferAmount';
+import {ModalReason} from './modal/ModalReason';
+import {ReasonModal} from '../../../../components/reasonModal/ReasonModal';
 
 export const TransferAmount = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [titlePressable, setTitlePressable] = useState({
+    name: null,
+    ImageSvg: null,
+  });
+  console.log(titlePressable);
   return (
     <SafeAreaView style={styleTransferAmount.safeArea}>
       <Header title={'BBVA - CA 7938'} imageTitle={BBVALogo} />
@@ -28,9 +35,13 @@ export const TransferAmount = () => {
             </Text>
           </Pressable>
         </View>
-        <Pressable style={styleTransferAmount.pressableReason}>
-          <Text style={styleTransferAmount.textReason}>Motivo</Text>
-          <Arrow style={styleTransferAmount.arrow} width={24} />
+        <Pressable
+          style={styleTransferAmount.pressableReason}
+          onPress={() => setModalVisible(true)}>
+          <ReasonModal
+            name={titlePressable.name}
+            image={titlePressable.ImageSvg}
+          />
         </Pressable>
       </View>
       <PrimaryBotton
@@ -38,6 +49,12 @@ export const TransferAmount = () => {
         color="BLUE"
         width={'80%'}
         direction="CENTER"
+        OnPress={() => {}}
+      />
+      <ModalReason
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+        setTitle={setTitlePressable}
       />
     </SafeAreaView>
   );
