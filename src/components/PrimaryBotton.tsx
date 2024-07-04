@@ -1,8 +1,9 @@
-import {Text, Pressable, GestureResponderEvent} from 'react-native';
+import {Text, Pressable, GestureResponderEvent, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {colors} from '../utils/constants/colors';
 import stylePrimaryBotton from './stylePrimaryBotton';
+import {SvgProps} from 'react-native-svg';
 
 enum Colors {
   PINK = 'pink',
@@ -20,6 +21,7 @@ interface Props {
   direction: keyof typeof Direction;
   color: keyof typeof Colors;
   OnPress: (event: GestureResponderEvent) => void;
+  Image?: React.FC<SvgProps>;
 }
 
 export const PrimaryBotton = ({
@@ -28,6 +30,7 @@ export const PrimaryBotton = ({
   direction,
   color,
   OnPress,
+  Image,
 }: Props) => {
   return (
     <Pressable onPress={OnPress}>
@@ -43,7 +46,12 @@ export const PrimaryBotton = ({
           stylePrimaryBotton.button,
           {width: width, alignSelf: Direction[direction]},
         ]}>
-        <Text style={stylePrimaryBotton.textBotton}>{nameButton}</Text>
+        <View style={stylePrimaryBotton.viewContainer}>
+          {Image ? (
+            <Image width={28} height={28} style={stylePrimaryBotton.image} />
+          ) : null}
+          <Text style={stylePrimaryBotton.textBotton}>{nameButton}</Text>
+        </View>
       </LinearGradient>
     </Pressable>
   );

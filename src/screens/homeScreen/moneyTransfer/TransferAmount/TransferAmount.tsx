@@ -7,6 +7,16 @@ import {PrimaryBotton} from '../../../../components/PrimaryBotton';
 import styleTransferAmount from './styleTransferAmount';
 import {ModalReason} from './modal/ModalReason';
 import {ReasonModal} from '../../../../components/reasonModal/ReasonModal';
+import {useNavigation} from '@react-navigation/native';
+import 'intl';
+import 'intl/locale-data/jsonp/es-AR';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../../../../navigation/TransferNavigationStack';
+
+type TransferDataVerificationScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'TransferDataVerification'
+>;
 
 export const TransferAmount = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -14,7 +24,11 @@ export const TransferAmount = () => {
     name: null,
     ImageSvg: null,
   });
-  console.log(titlePressable);
+  const navigation =
+    useNavigation<TransferDataVerificationScreenNavigationProp>();
+
+  const [number, setNumber] = useState('0');
+
   return (
     <SafeAreaView style={styleTransferAmount.safeArea}>
       <Header title={'BBVA - CA 7938'} imageTitle={BBVALogo} />
@@ -26,7 +40,15 @@ export const TransferAmount = () => {
               placeholder="0"
               placeholderTextColor={colors.grey}
               style={styleTransferAmount.input}
-              keyboardType="numeric"
+              keyboardType="number-pad"
+              value={number}
+              onChangeText={(text: string) => {
+                let numberText = Number(text.replaceAll('.', ''));
+                const formatNumber = new Intl.NumberFormat('es-AR').format(
+                  numberText,
+                );
+                setNumber(formatNumber);
+              }}
             />
           </View>
           <Pressable>
@@ -49,7 +71,9 @@ export const TransferAmount = () => {
         color="BLUE"
         width={'80%'}
         direction="CENTER"
-        OnPress={() => {}}
+        OnPress={() => {
+          navigation.navigate('TransferDataVerification', {amount: number});
+        }}
       />
       <ModalReason
         modalVisible={modalVisible}

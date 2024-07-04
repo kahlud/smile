@@ -5,11 +5,22 @@ import {TransactionType} from '../../utils/constants/transactionType';
 import {colors} from '../../utils/constants/colors';
 import styleActivityInformation from './styleActivityInformation';
 
+interface SenderInformation {
+  name: string;
+}
+
+interface RecipientInformation {
+  name: string;
+}
+interface Information {
+  senderInformation: SenderInformation;
+  recipientInformation: RecipientInformation;
+}
 interface Props {
   transactionType: TransactionType;
   transactionDate: string;
   transactionAmount: string;
-  transactionInformation: {};
+  transactionInformation: Information;
 }
 
 export const ActivityInformation = ({

@@ -1,4 +1,19 @@
-export const cardsDetails = [
+export type Bank = 'BBVA' | 'ICBC';
+export type CardEmiter = 'Visa' | 'MasterCard';
+
+interface CardData {
+  bank: Bank;
+  cardEmiter: CardEmiter;
+  cardType: string;
+  numberCard: string;
+  expiration: {
+    month: string;
+    year: string;
+  };
+  availableMoney: string;
+}
+
+export const cardsDetails: CardData[] = [
   {
     bank: 'BBVA',
     cardEmiter: 'MasterCard',

@@ -10,10 +10,13 @@ import {HomeActivityButton} from '../../components/bottomActivity/HomeActivityBu
 import {activityInformation} from '../../mock/activityInformation';
 import {ActivityInformation} from '../../components/activityInformation/ActivityInformation';
 import {PrimaryBotton} from '../../components/PrimaryBotton';
-import {useNavigation} from '@react-navigation/native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../navigation/RootNavigator';
+
+type Navigation = NavigationProp<RootStackParamList>;
 
 export const HomeScreen = () => {
-  const navigtion = useNavigation();
+  const navigtion = useNavigation<Navigation>();
   return (
     <SafeAreaView style={StyleHome.safeAreaHome}>
       <ScrollView style={StyleHome.scrollView}>
@@ -28,9 +31,9 @@ export const HomeScreen = () => {
             horizontal={true}
             data={cardsDetails}
             contentContainerStyle={StyleHome.flatListCardsContainer}
-            ItemSeparatorComponent={
-              <View style={StyleHome.itemSeparatorCards} />
-            }
+            ItemSeparatorComponent={() => {
+              return <View style={StyleHome.itemSeparatorCards} />;
+            }}
             renderItem={({item, index}) => (
               <View style={StyleHome.shadowCard}>
                 <Card

@@ -7,11 +7,17 @@ import Camera from '../../../../assets/images/icons/camera.svg';
 import {PrimaryBotton} from '../../../../components/PrimaryBotton';
 import {useNavigation} from '@react-navigation/native';
 import styleTransferData from './styleTransferData';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../../../../navigation/TransferNavigationStack';
 
 interface Props {}
+type TransferAmountScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'TransferAmount'
+>;
 
 export const TransferData = ({}: Props) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<TransferAmountScreenNavigationProp>();
   return (
     <SafeAreaView style={styleTransferData.safeArea}>
       <Header title="Transferir a CBU / CVU / Alias" />

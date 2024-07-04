@@ -9,15 +9,23 @@ interface Props {
   title: string;
   image?: React.FC<SvgProps>;
   imageTitle?: React.FC<SvgProps>;
+  onBack?: () => void;
 }
 
-export const Header = ({title, image, imageTitle}: Props) => {
+export const Header = ({title, image, imageTitle, onBack}: Props) => {
   const navigation = useNavigation();
   const ImageBotton = image;
   const ImageTitle = imageTitle;
+  const handleOnBack = () => {
+    if (onBack) {
+      onBack();
+      return;
+    }
+    navigation.goBack();
+  };
   return (
     <View style={StyleComponentsHeader.containerHeader}>
-      <Pressable onPress={navigation.goBack}>
+      <Pressable onPress={handleOnBack}>
         <Arrow width={34} height={34} />
       </Pressable>
       <View style={StyleComponentsHeader.containerTitle}>
