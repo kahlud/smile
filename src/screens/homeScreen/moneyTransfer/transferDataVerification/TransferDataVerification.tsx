@@ -8,6 +8,7 @@ import Alias from '../../../../assets/images/icons/accountData/attach-square.svg
 import Card from '../../../../assets/images/icons/accountData/card.svg';
 import PersonalCard from '../../../../assets/images/icons/accountData/personalcard.svg';
 import MoneySend from '../../../../assets/images/icons/accountData/money-send.svg';
+import Reason from '../../../../assets/images/icons/reason.svg';
 import {DataReview} from '../../../../components/dataReview/DataReview';
 import {PrimaryBotton} from '../../../../components/PrimaryBotton';
 import {useNavigation} from '@react-navigation/native';
@@ -41,6 +42,7 @@ export const TransferDataVerification = ({
           title="Monto"
           data={`$${route.params.amount}`}
         />
+        <DataReview Image={Reason} title="Motivo" data={route.params.reason} />
         <DataReview Image={Bank} title="Banco" data="Naranjax · CA 0922 " />
         <DataReview Image={Alias} title="Alias" data="kdiaz.NX" />
         <DataReview

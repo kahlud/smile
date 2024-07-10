@@ -72,7 +72,10 @@ export const TransferAmount = () => {
         width={'80%'}
         direction="CENTER"
         OnPress={() => {
-          navigation.navigate('TransferDataVerification', {amount: number});
+          navigation.navigate('TransferDataVerification', {
+            amount: number,
+            reason: titlePressable.name,
+          });
         }}
       />
       <ModalReason

@@ -18,7 +18,7 @@ export type RootStackParamList = {
   MoneyTransfer: undefined;
   TransferData: undefined;
   TransferAmount: undefined;
-  TransferDataVerification: {amount: string};
+  TransferDataVerification: {amount: string; reason: string};
   SuccessfulTransfer: undefined;
 };
 
